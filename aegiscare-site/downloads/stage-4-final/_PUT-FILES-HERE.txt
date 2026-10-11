@@ -1,0 +1,8 @@
+Put these 6 files in this folder (keep the names EXACTLY, including capital letters and spaces):
+
+Final Presentation.pptx
+Final Report Member1.pdf
+Final Report Member2.pdf
+Final Report Member3.pdf
+Final Report Member4.pdf
+Research Paper.pdf

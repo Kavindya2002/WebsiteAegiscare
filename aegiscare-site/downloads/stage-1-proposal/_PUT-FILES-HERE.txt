@@ -1,0 +1,7 @@
+Put these 5 files in this folder (keep the names EXACTLY, including capital letters and spaces):
+
+Proposal Presentation.pptx
+Proposal Report-Member 1.pdf
+Proposal Report-Member 2.pdf
+Proposal Report-Member 3.pdf
+Proposal Report-Member 4.pdf

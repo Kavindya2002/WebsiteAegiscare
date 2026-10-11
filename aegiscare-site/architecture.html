@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Full system architecture | AegisCare</title>
+<meta name="description" content="End-to-end architecture of AegisCare: sensing, edge processing, fused risk assessment, XGBoost alert decision and response delivery.">
+<meta name="theme-color" content="#0F0E1E">
+<meta property="og:title" content="Full system architecture | AegisCare">
+<meta property="og:description" content="End-to-end architecture of AegisCare: sensing, edge processing, fused risk assessment, XGBoost alert decision and response delivery.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 3 56 11v19c0 16-11 26-24 31C19 56 8 46 8 30V11z' fill='%232F6BFF'/%3E%3Cpath d='M16 33h9l4-10 7 20 4-10h8' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/inter-400.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+<script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('aegis-theme')}catch(e){}d.setAttribute('data-theme',t||'dark');d.className+=' js'})()</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+<div class="bg-fx" aria-hidden="true"><div class="orb a"></div><div class="orb b"></div><div class="orb c"></div></div>
+<header class="nav">
+ <div class="container nav-in">
+  <a class="brand" href="index.html" aria-label="AegisCare home"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="bgn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3B7BFF"/><stop offset="1" stop-color="#1239A8"/></linearGradient></defs><path d="M32 3 56 11v19c0 16-11 26-24 31C19 56 8 46 8 30V11z" fill="url(#bgn)"/><path d="M16 33h9l4-10 7 20 4-10h8" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Aegis<b>Care</b><small>Safer today, healthier tomorrow</small></span></a>
+  <nav aria-label="Main"><ul class="menu" id="menu"><li><a class="lnk" href="index.html">Home</a></li><li><a class="lnk" href="about.html">About the research</a></li><li><a class="lnk" href="team.html">Team</a></li><li class="has-sub"><a class="lnk" href="features.html">Features<svg class=caret viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M6 9l6 6 6-6"/></svg></a><ul class="sub"><li><a href="feature-activity-recognition.html"><i class="c1" style="background:#5B93FF;color:#5B93FF"></i>Activity recognition</a></li><li><a href="feature-environmental-risk.html"><i class="c2" style="background:#34D399;color:#34D399"></i>Environmental risk mapping</a></li><li><a href="feature-ppg-fall-risk.html"><i class="c3" style="background:#FB7185;color:#FB7185"></i>PPG fall-risk prediction</a></li><li><a href="feature-alert-classification.html"><i class="c4" style="background:#A78BFA;color:#A78BFA"></i>Intelligent alert classification</a></li></ul></li><li><a class="lnk" href="architecture.html" aria-current="page">Architecture</a></li><li><a class="lnk" href="resources.html">Research archive</a></li></ul></nav>
+  <div class="tools">
+   <button class="icon-btn theme-btn" aria-label="Switch to light mode" title="Switch light / dark mode"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+   <button class="icon-btn burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+ </div>
+</header>
+<main id="main">
+
+<section class="page-hero"><div class="container"><span class="label">Full system architecture</span><h1>From sensing to intervention: the AegisCare end-to-end architecture</h1>
+<p class="lead">Four sensing components are fused into one adaptive intervention pipeline. Select any block to open the component it belongs to.</p></div></section>
+
+<section class="section" style="padding-top:20px"><div class="container">
+ <div class="arch rv">
+  <div class="arch-row three"><a class="node-card c1" href="feature-activity-recognition.html"><span class="tag">Component 1</span><span class="ico" style="width:42px;height:42px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></span><h3>Wearable IMU</h3><p>Activity recognition: posture, fall type, tilt and stay-down check.</p></a><a class="node-card c2" href="feature-environmental-risk.html"><span class="tag">Component 2</span><span class="ico" style="width:42px;height:42px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></span><h3>Camera and IoT sensors</h3><p>Environmental mapping: moisture, light, obstacles, risk map.</p></a><a class="node-card c3" href="feature-ppg-fall-risk.html"><span class="tag">Component 3</span><span class="ico" style="width:42px;height:42px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M12 20s-8-5.2-8-11a4.6 4.6 0 0 1 8-3 4.6 4.6 0 0 1 8 3c0 5.8-8 11-8 11z"/></svg></span><h3>MAX30102 sensor</h3><p>Biosignal prediction: heart rate, blood pressure, fall-risk status.</p></a></div>
+  <div class="vlink"><span>sensor data and extracted features</span></div>
+  <div class="fused"><h3>Fused risk assessment</h3><p>The evidence from every component is combined into one structured result.</p><div class="chips"><span class="chip">FallDetected</span><span class="chip">FallType</span><span class="chip">RiskScore</span><span class="chip">Context</span></div></div>
+  <div class="vlink"><span>nine input features</span></div>
+  <a class="decide c4" href="feature-alert-classification.html" style="color:var(--text);display:block"><span class="tag" style="--accent:var(--c4)">Component 4</span><h3 style="margin-top:10px">XGBoost alert decision engine</h3><p style="color:var(--muted);margin:0 auto;font-size:.93rem">Chooses a voice alert, a caregiver alert or an emergency alert.</p></a>
+  <div class="vlink"><span>response level</span></div>
+  <div class="arch-row five"><div class="resp">Alert selection<small>Choose the level</small></div><div class="resp">Notification<small>Tell the right person</small></div><div class="resp">Recovery guidance<small>Voice instructions</small></div><div class="resp">Sensor feedback<small>Confirm the outcome</small></div><div class="resp">Adaptive response<small>Escalate if needed</small></div></div>
+ </div>
+ <p class="mini-note" style="text-align:center;margin-top:18px">Component 3 streams vitals in parallel. The classifier in Component 4 takes its nine features from the fall event, the environmental context and the stored elder risk profile.</p>
+</div></section>
+
+<section class="section alt"><div class="container split">
+ <div class="rv"><span class="label">Original design</span><h2>Solution overview diagram</h2><p class="lead">The diagram the team used to present the overall solution: three sensing components feed a fused risk assessment, which the alert decision engine turns into five response stages.</p></div>
+ <div class="rv" style="--d:2"><figure><div class="plate"><img src="assets/img/arch-overview.jpg" alt="Solution overview and architecture: wearable IMU, camera plus IoT sensors and MAX30102 sensor feed a fused risk assessment and the Component 4 XGBoost alert decision engine, followed by five response stages." loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><circle cx="11" cy="11" r="6"/><path d="M20 20l-4-4M11 8v6M8 11h6"/></svg>Click to enlarge</span></div><figcaption>Solution overview and architecture: four sensing components, fused into one adaptive intervention pipeline.</figcaption></figure></div>
+</div></section>
+
+<section class="section"><div class="container">
+ <div class="section-head rv"><span class="label">Layer by layer</span><h2>What happens at each level of the system</h2></div>
+ <div class="layers"><div class="layer rv"><b>Perception</b><p>Wearable BMI160 motion sensor, light, moisture and distance sensors with an optional camera, and the MAX30102 optical sensor.</p></div><div class="layer rv"><b>Edge and transport</b><p>Wemos D1 Mini (ESP8266) and ESP32 boards calibrate, filter and package readings, then send them over Wi-Fi using MQTT (HiveMQ Cloud with TLS) and WebSocket.</p></div><div class="layer rv"><b>Intelligence</b><p>A Flask backend runs the Random Forest and the Fall Engine, hazard detection and risk mapping, and the PPG-to-blood-pressure model with fall-risk prediction.</p></div><div class="layer rv"><b>Decision</b><p>An XGBoost classifier turns nine features from the fall event, environmental context and elder risk profile into one of three response levels.</p></div><div class="layer rv"><b>Delivery and feedback</b><p>A React web platform for institutions, a mobile app for caregivers, and a Supabase database for stored vitals and events. Sensor feedback adapts the next response.</p></div></div>
+</div></section>
+
+<section class="section alt"><div class="container">
+ <div class="section-head rv"><span class="label">Go deeper</span><h2>Hardware and data-flow diagrams for each component</h2><p>Every component page has its own system diagram that you can enlarge.</p></div>
+ <div class="grid g4"><a class="card lift comp c1 rv" style="--d:0" href="feature-activity-recognition.html#diagram"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></span><h3>Activity recognition</h3><span class="go">View diagram <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="card lift comp c2 rv" style="--d:1" href="feature-environmental-risk.html#diagram"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></span><h3>Environmental risk mapping</h3><span class="go">View diagram <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="card lift comp c3 rv" style="--d:2" href="feature-ppg-fall-risk.html#diagram"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M12 20s-8-5.2-8-11a4.6 4.6 0 0 1 8-3 4.6 4.6 0 0 1 8 3c0 5.8-8 11-8 11z"/></svg></span><h3>PPG fall-risk prediction</h3><span class="go">View diagram <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="card lift comp c4 rv" style="--d:3" href="feature-alert-classification.html#diagram"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 21a2 2 0 0 0 4 0"/></svg></span><h3>Intelligent alert classification</h3><span class="go">View diagram <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+</div></section>
+</main>
+<footer class="footer">
+ <div class="container">
+  <div class="foot-grid">
+   <div><a class="brand" href="index.html"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="bgf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3B7BFF"/><stop offset="1" stop-color="#1239A8"/></linearGradient></defs><path d="M32 3 56 11v19c0 16-11 26-24 31C19 56 8 46 8 30V11z" fill="url(#bgf)"/><path d="M16 33h9l4-10 7 20 4-10h8" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Aegis<b>Care</b></span></a>
+    <p style="margin-top:14px">Intelligent fall monitoring for elderly care. A final year research project by Group R26_IT_051, Faculty of Computing, Sri Lanka Institute of Information Technology (SLIIT).</p></div>
+   <div><h4>Explore</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About the research</a></li><li><a href="team.html">Team</a></li><li><a href="architecture.html">Full system architecture</a></li><li><a href="resources.html">Research archive</a></li></ul></div>
+   <div><h4>Components</h4><ul><li><a href="feature-activity-recognition.html">Activity recognition</a></li><li><a href="feature-environmental-risk.html">Environmental risk mapping</a></li><li><a href="feature-ppg-fall-risk.html">PPG fall-risk prediction</a></li><li><a href="feature-alert-classification.html">Intelligent alert classification</a></li></ul></div>
+   <div><h4>Contact</h4><ul><li><a href="mailto:it22548078@my.sliit.lk">it22548078@my.sliit.lk</a></li><li>Group leader: M T K Chathuri</li><li><a href="team.html#contact">All team contacts</a></li></ul></div>
+  </div>
+  <div class="foot-b"><span>&copy; <span class="yr">2026</span> AegisCare, Group R26_IT_051. Academic research project.</span><span>Built with HTML, CSS and a little JavaScript.</span></div>
+ </div>
+</footer>
+<button class="icon-btn totop" aria-label="Back to top"><svg style="transform:rotate(-90deg)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
